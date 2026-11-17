@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ddcwklnj7k1kv"]
+
+[ext_resource type="Script" uid="uid://cpicwh63alnkb" path="res://Scripts/main_menu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://3r6m5wp3xvwr" path="res://Assets/ITI_blanco.png" id="2_2yntn"]
+[ext_resource type="Texture2D" uid="uid://d2q8nkcr20x0p" path="res://Assets/cropped-LogoUPG.png" id="3_87iyl"]
+
+[node name="MainMenu" type="Control" unique_id=455841479]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="ItiBlanco" type="Sprite2D" parent="." unique_id=1806416270]
+z_index = 2
+position = Vector2(172.5, 560.5)
+scale = Vector2(0.31595746, 0.34473687)
+texture = ExtResource("2_2yntn")
+
+[node name="CroppedLogoUpg" type="Sprite2D" parent="." unique_id=850057252]
+z_index = 2
+position = Vector2(972.00006, 556.25)
+scale = Vector2(0.38028187, 0.34140247)
+texture = ExtResource("3_87iyl")

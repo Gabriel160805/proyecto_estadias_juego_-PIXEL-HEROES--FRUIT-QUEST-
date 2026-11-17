@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ddddm2yxelmbm"]
+
+[ext_resource type="Texture2D" uid="uid://drqow5wn81rkg" path="res://Assets/Traps/Spikes/Idle.png" id="1_8r5d5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r5d5"]
+size = Vector2(7.6468215, 7.53911)
+
+[node name="spikes" type="StaticBody2D" unique_id=1376819864]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=918906743]
+texture = ExtResource("1_8r5d5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=471808883]
+position = Vector2(-4.625, 7.9999995)
+rotation = -1.1309733
+scale = Vector2(1, 0.99999964)
+skew = 0.72256625
+shape = SubResource("RectangleShape2D_8r5d5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=319310483]
+position = Vector2(3.500001, 8.000002)
+rotation = -1.1309733
+skew = 0.7225663
+shape = SubResource("RectangleShape2D_8r5d5")
+
+[node name="damage_zone" type="Area2D" parent="." unique_id=1669464230]
+collision_layer = 2
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damage_zone" unique_id=1167268934]
+position = Vector2(-4.625, 7.9999995)
+rotation = -1.1309733
+scale = Vector2(1.1, 1.1)
+skew = 0.72256625
+shape = SubResource("RectangleShape2D_8r5d5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="damage_zone" unique_id=558636803]
+position = Vector2(3.500001, 8.000002)
+rotation = -1.1309733
+scale = Vector2(1.1, 1.1)
+skew = 0.7225663
+shape = SubResource("RectangleShape2D_8r5d5")

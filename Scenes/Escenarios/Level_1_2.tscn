@@ -1,0 +1,1216 @@
+[gd_scene format=3 uid="uid://di3dcwwmlvu00"]
+
+[ext_resource type="PackedScene" uid="uid://bdd1wkno8rycv" path="res://Scenes/day_forest.tscn" id="1_eqh2a"]
+[ext_resource type="PackedScene" uid="uid://ovhlo3b4meo5" path="res://Scenes/enviroment/start.tscn" id="3_d23nm"]
+[ext_resource type="PackedScene" uid="uid://bakt6jkkbyb4k" path="res://Scenes/Escenarios/tiles/escenario_level_1_2.tscn" id="3_siasv"]
+[ext_resource type="PackedScene" uid="uid://dwwc3md4kshj7" path="res://Scenes/Enemys/rock_head.tscn" id="4_25ouo"]
+[ext_resource type="PackedScene" uid="uid://7ocysfmg44ka" path="res://Scenes/enviroment/trampoline.tscn" id="4_ww5hm"]
+[ext_resource type="PackedScene" uid="uid://doh1triqqbvw5" path="res://Scenes/enviroment/fruit.tscn" id="5_tni3a"]
+[ext_resource type="PackedScene" uid="uid://ddddm2yxelmbm" path="res://Scenes/Enemys/spikes.tscn" id="7_kjv4t"]
+[ext_resource type="PackedScene" uid="uid://3wogy66oxw4x" path="res://Scenes/enviroment/moving_platform_1.tscn" id="8_ovfo5"]
+[ext_resource type="PackedScene" uid="uid://di6vptlc7uydc" path="res://Scenes/Enemys/spike_head.tscn" id="9_5rvl0"]
+[ext_resource type="PackedScene" uid="uid://yki55sp341ep" path="res://Scenes/Enemys/spike_ball.tscn" id="11_wgqrc"]
+[ext_resource type="PackedScene" uid="uid://djd4r14hpduk6" path="res://Scenes/enviroment/end.tscn" id="12_aiur6"]
+[ext_resource type="PackedScene" uid="uid://bvvjw04gc613d" path="res://Scenes/Enemys/fire.tscn" id="12_eqh2a"]
+[ext_resource type="Texture2D" uid="uid://dgvuhitukwycw" path="res://Assets/logo2.png" id="13_u0wn7"]
+[ext_resource type="PackedScene" uid="uid://3iuxnr7b4611" path="res://Scenes/enviroment/checkpoint.tscn" id="14_d23nm"]
+
+[sub_resource type="Curve2D" id="Curve2D_5rvl0"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -74, 39, 0, 0, 0, 0, 68, -11, 0, 0, 0, 0, 454, -10, 0, 0, 0, 0, 590, 39, 0, 0, 0, 0, -74, 39)
+}
+point_count = 5
+
+[sub_resource type="Animation" id="Animation_ovfo5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5rvl0"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.5, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hydky"]
+_data = {
+&"RESET": SubResource("Animation_ovfo5"),
+&"new_animation": SubResource("Animation_5rvl0")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_hydky"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3531, -151, 0, 0, 0, 0, 3531, 774)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_mxvv3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_eqh2a"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.25, 2.5, 3.75, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.25, 0.5, 0.75, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u0wn7"]
+_data = {
+&"RESET": SubResource("Animation_mxvv3"),
+&"new_animation": SubResource("Animation_eqh2a")
+}
+
+[sub_resource type="Animation" id="Animation_d23nm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_ww5hm"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.49, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.5, 1.0, 0.0, 0.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tni3a"]
+_data = {
+&"RESET": SubResource("Animation_d23nm"),
+&"new_animation": SubResource("Animation_ww5hm")
+}
+
+[sub_resource type="Animation" id="Animation_sk5vv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.25]
+}
+
+[sub_resource type="Animation" id="Animation_kjv4t"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.25, 2.5, 3.75, 3.76, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.25, 0.5, 0.75, 1.0, 0.0, 0.25]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rt723"]
+_data = {
+&"RESET": SubResource("Animation_sk5vv"),
+&"new_animation": SubResource("Animation_kjv4t")
+}
+
+[sub_resource type="Animation" id="Animation_hydky"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.75]
+}
+
+[sub_resource type="Animation" id="Animation_u0wn7"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.25, 1.26, 2.5, 3.75, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.75, 1.0, 0.0, 0.25, 0.5, 0.75]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d23nm"]
+_data = {
+&"RESET": SubResource("Animation_hydky"),
+&"new_animation": SubResource("Animation_u0wn7")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_mxvv3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3795, 760, 0, 0, 0, 0, 3795, -168)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_tni3a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D3/2:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_rt723"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D3/2:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8l5ss"]
+_data = {
+&"RESET": SubResource("Animation_tni3a"),
+&"new_animation": SubResource("Animation_rt723")
+}
+
+[sub_resource type="Animation" id="Animation_apy5p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.25]
+}
+
+[sub_resource type="Animation" id="Animation_wgqrc"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.25, 2.5, 3.74, 3.75, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.25, 0.5, 0.75, 1.0, 0.0, 0.25]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aiur6"]
+_data = {
+&"RESET": SubResource("Animation_apy5p"),
+&"new_animation": SubResource("Animation_wgqrc")
+}
+
+[sub_resource type="Animation" id="Animation_vukcr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_t2xqt"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.25, 2.49, 2.5, 3.75, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.5, 0.75, 1.0, 0.0, 0.25, 0.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rr0fq"]
+_data = {
+&"RESET": SubResource("Animation_vukcr"),
+&"new_animation": SubResource("Animation_t2xqt")
+}
+
+[sub_resource type="Animation" id="Animation_oux4f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.75]
+}
+
+[sub_resource type="Animation" id="Animation_rom72"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.24, 1.25, 2.5, 3.75, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.75, 1.0, 0.0, 0.25, 0.5, 0.75]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ylwo6"]
+_data = {
+&"RESET": SubResource("Animation_oux4f"),
+&"new_animation": SubResource("Animation_rom72")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_jtht8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 4065, -163, 0, 0, 0, 0, 4065, 771)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_wokv3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1epyj"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.25, 2.5, 3.75, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.25, 0.5, 0.75000006, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tggmf"]
+_data = {
+&"RESET": SubResource("Animation_wokv3"),
+&"new_animation": SubResource("Animation_1epyj")
+}
+
+[sub_resource type="Animation" id="Animation_84x25"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.25]
+}
+
+[sub_resource type="Animation" id="Animation_xh0n8"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.25, 2.5, 3.74, 3.75, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.25, 0.5, 0.75000006, 1.0, 0.0, 0.25]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i2ofy"]
+_data = {
+&"RESET": SubResource("Animation_84x25"),
+&"new_animation": SubResource("Animation_xh0n8")
+}
+
+[sub_resource type="Animation" id="Animation_a6e7d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_t02f0"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.25, 2.49, 2.5, 3.75, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.5, 0.75000006, 1.0, 0.0, 0.25, 0.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_flyfn"]
+_data = {
+&"RESET": SubResource("Animation_a6e7d"),
+&"new_animation": SubResource("Animation_t02f0")
+}
+
+[sub_resource type="Animation" id="Animation_x80ug"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.75000006]
+}
+
+[sub_resource type="Animation" id="Animation_borcr"]
+resource_name = "new_animation"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.24, 1.25, 2.5, 3.75, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.75000006, 1.0, 0.0, 0.25, 0.5, 0.75000006]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qb274"]
+_data = {
+&"RESET": SubResource("Animation_x80ug"),
+&"new_animation": SubResource("Animation_borcr")
+}
+
+[node name="Node2D" type="Node2D" unique_id=838742884]
+
+[node name="day_forest" parent="." unique_id=2057598182 instance=ExtResource("1_eqh2a")]
+
+[node name="Start" parent="." unique_id=851152876 instance=ExtResource("3_d23nm")]
+position = Vector2(137, 511)
+
+[node name="Node" parent="." unique_id=834446824 instance=ExtResource("3_siasv")]
+
+[node name="rock_head" parent="." unique_id=871742230 instance=ExtResource("4_25ouo")]
+position = Vector2(871, 394)
+attack_direction = 1
+
+[node name="spikes" parent="." unique_id=1376819864 instance=ExtResource("7_kjv4t")]
+position = Vector2(785, 560)
+
+[node name="spikes2" parent="." unique_id=549506060 instance=ExtResource("7_kjv4t")]
+position = Vector2(817, 560)
+
+[node name="spikes3" parent="." unique_id=1996553505 instance=ExtResource("7_kjv4t")]
+position = Vector2(849, 560)
+
+[node name="spikes4" parent="." unique_id=1389004202 instance=ExtResource("7_kjv4t")]
+position = Vector2(881, 560)
+
+[node name="spikes5" parent="." unique_id=1376673958 instance=ExtResource("7_kjv4t")]
+position = Vector2(913, 560)
+
+[node name="spikes6" parent="." unique_id=189525867 instance=ExtResource("7_kjv4t")]
+position = Vector2(945, 560)
+
+[node name="spikes7" parent="." unique_id=62390524 instance=ExtResource("7_kjv4t")]
+position = Vector2(977, 560)
+
+[node name="spikes8" parent="." unique_id=498388142 instance=ExtResource("7_kjv4t")]
+position = Vector2(1009, 560)
+
+[node name="spikes9" parent="." unique_id=1188228921 instance=ExtResource("7_kjv4t")]
+position = Vector2(1042, 560)
+
+[node name="spikes10" parent="." unique_id=47953440 instance=ExtResource("7_kjv4t")]
+position = Vector2(1074, 560)
+
+[node name="spikes11" parent="." unique_id=567458697 instance=ExtResource("7_kjv4t")]
+position = Vector2(1106, 560)
+
+[node name="spikes12" parent="." unique_id=1431359653 instance=ExtResource("7_kjv4t")]
+position = Vector2(1138, 560)
+
+[node name="spikes13" parent="." unique_id=1953117832 instance=ExtResource("7_kjv4t")]
+position = Vector2(1170, 560)
+
+[node name="spikes14" parent="." unique_id=536978751 instance=ExtResource("7_kjv4t")]
+position = Vector2(1202, 560)
+
+[node name="spikes15" parent="." unique_id=1114833173 instance=ExtResource("7_kjv4t")]
+position = Vector2(1234, 560)
+
+[node name="spikes16" parent="." unique_id=226019921 instance=ExtResource("7_kjv4t")]
+position = Vector2(1266, 560)
+
+[node name="spikes17" parent="." unique_id=1021186476 instance=ExtResource("7_kjv4t")]
+position = Vector2(1298, 560)
+
+[node name="spikes18" parent="." unique_id=761428045 instance=ExtResource("7_kjv4t")]
+position = Vector2(1330, 560)
+
+[node name="spikes19" parent="." unique_id=1755030864 instance=ExtResource("7_kjv4t")]
+position = Vector2(1362, 560)
+
+[node name="spikes20" parent="." unique_id=2027754969 instance=ExtResource("7_kjv4t")]
+position = Vector2(1394, 560)
+
+[node name="spikes21" parent="." unique_id=1916390128 instance=ExtResource("7_kjv4t")]
+position = Vector2(1426, 560)
+
+[node name="trampoline" parent="." unique_id=390938680 instance=ExtResource("4_ww5hm")]
+position = Vector2(1571, 548)
+
+[node name="spikes22" parent="." unique_id=755453132 instance=ExtResource("7_kjv4t")]
+position = Vector2(1746, 560)
+
+[node name="spikes23" parent="." unique_id=1212136711 instance=ExtResource("7_kjv4t")]
+position = Vector2(1778, 560)
+
+[node name="spikes24" parent="." unique_id=1772945343 instance=ExtResource("7_kjv4t")]
+position = Vector2(1810, 560)
+
+[node name="spikes25" parent="." unique_id=1647335100 instance=ExtResource("7_kjv4t")]
+position = Vector2(1842, 560)
+
+[node name="spikes26" parent="." unique_id=1074725700 instance=ExtResource("7_kjv4t")]
+position = Vector2(1874, 560)
+
+[node name="spikes27" parent="." unique_id=1783574092 instance=ExtResource("7_kjv4t")]
+position = Vector2(1907, 560)
+
+[node name="spikes28" parent="." unique_id=666339684 instance=ExtResource("7_kjv4t")]
+position = Vector2(1939, 560)
+
+[node name="spikes29" parent="." unique_id=561355338 instance=ExtResource("7_kjv4t")]
+position = Vector2(1971, 560)
+
+[node name="spikes30" parent="." unique_id=521157913 instance=ExtResource("7_kjv4t")]
+position = Vector2(2003, 560)
+
+[node name="spikes31" parent="." unique_id=985360066 instance=ExtResource("7_kjv4t")]
+position = Vector2(2035, 560)
+
+[node name="fruit" parent="." unique_id=2040657729 instance=ExtResource("5_tni3a")]
+position = Vector2(852, 348)
+
+[node name="fruit2" parent="." unique_id=1150273213 instance=ExtResource("5_tni3a")]
+position = Vector2(884, 348)
+
+[node name="fruit3" parent="." unique_id=32024455 instance=ExtResource("5_tni3a")]
+position = Vector2(921, 348)
+
+[node name="fruit4" parent="." unique_id=696459901 instance=ExtResource("5_tni3a")]
+position = Vector2(959, 348)
+
+[node name="fruit5" parent="." unique_id=1120330051 instance=ExtResource("5_tni3a")]
+position = Vector2(996, 347)
+
+[node name="fruit6" parent="." unique_id=1299965735 instance=ExtResource("5_tni3a")]
+position = Vector2(1038, 348)
+
+[node name="fruit7" parent="." unique_id=1890718740 instance=ExtResource("5_tni3a")]
+position = Vector2(1091, 310)
+fruitType = "banana"
+
+[node name="fruit8" parent="." unique_id=1102935311 instance=ExtResource("5_tni3a")]
+position = Vector2(1148, 292)
+fruitType = "cherry"
+
+[node name="fruit9" parent="." unique_id=1589585194 instance=ExtResource("5_tni3a")]
+position = Vector2(1210, 310)
+fruitType = "banana"
+
+[node name="fruit10" parent="." unique_id=1260578467 instance=ExtResource("5_tni3a")]
+position = Vector2(1260, 362)
+
+[node name="fruit11" parent="." unique_id=948545595 instance=ExtResource("5_tni3a")]
+position = Vector2(1298, 324)
+fruitType = "banana"
+
+[node name="fruit12" parent="." unique_id=1767298058 instance=ExtResource("5_tni3a")]
+position = Vector2(1342, 305)
+fruitType = "cherry"
+
+[node name="fruit13" parent="." unique_id=147189889 instance=ExtResource("5_tni3a")]
+position = Vector2(1570, 534)
+
+[node name="fruit14" parent="." unique_id=203548718 instance=ExtResource("5_tni3a")]
+position = Vector2(1569, 501)
+
+[node name="fruit15" parent="." unique_id=502971224 instance=ExtResource("5_tni3a")]
+position = Vector2(1745, 519)
+fruitType = "banana"
+
+[node name="fruit16" parent="." unique_id=342354334 instance=ExtResource("5_tni3a")]
+position = Vector2(1871, 518)
+fruitType = "cherry"
+
+[node name="spikes32" parent="." unique_id=1756632004 instance=ExtResource("7_kjv4t")]
+position = Vector2(2448, 560)
+
+[node name="spikes33" parent="." unique_id=1699346507 instance=ExtResource("7_kjv4t")]
+position = Vector2(2480, 560)
+
+[node name="spikes34" parent="." unique_id=15837909 instance=ExtResource("7_kjv4t")]
+position = Vector2(2512, 560)
+
+[node name="spikes35" parent="." unique_id=1905110497 instance=ExtResource("7_kjv4t")]
+position = Vector2(2544, 560)
+
+[node name="spikes36" parent="." unique_id=663918652 instance=ExtResource("7_kjv4t")]
+position = Vector2(2576, 560)
+
+[node name="spikes37" parent="." unique_id=318782182 instance=ExtResource("7_kjv4t")]
+position = Vector2(2608, 560)
+
+[node name="spikes38" parent="." unique_id=1599603082 instance=ExtResource("7_kjv4t")]
+position = Vector2(2640, 560)
+
+[node name="spikes39" parent="." unique_id=1524062496 instance=ExtResource("7_kjv4t")]
+position = Vector2(2672, 560)
+
+[node name="spikes40" parent="." unique_id=668070593 instance=ExtResource("7_kjv4t")]
+position = Vector2(2705, 560)
+
+[node name="spikes41" parent="." unique_id=61314716 instance=ExtResource("7_kjv4t")]
+position = Vector2(2737, 560)
+
+[node name="spikes42" parent="." unique_id=1844340724 instance=ExtResource("7_kjv4t")]
+position = Vector2(2769, 560)
+
+[node name="spikes43" parent="." unique_id=1822796072 instance=ExtResource("7_kjv4t")]
+position = Vector2(2801, 560)
+
+[node name="spikes44" parent="." unique_id=1418261394 instance=ExtResource("7_kjv4t")]
+position = Vector2(2833, 560)
+
+[node name="spikes45" parent="." unique_id=1568058024 instance=ExtResource("7_kjv4t")]
+position = Vector2(2865, 560)
+
+[node name="spikes46" parent="." unique_id=903639959 instance=ExtResource("7_kjv4t")]
+position = Vector2(2897, 560)
+
+[node name="spikes47" parent="." unique_id=1601203607 instance=ExtResource("7_kjv4t")]
+position = Vector2(2929, 560)
+
+[node name="spikes48" parent="." unique_id=1837291669 instance=ExtResource("7_kjv4t")]
+position = Vector2(2961, 560)
+
+[node name="spikes49" parent="." unique_id=1904060685 instance=ExtResource("7_kjv4t")]
+position = Vector2(2993, 560)
+
+[node name="spikes50" parent="." unique_id=610791323 instance=ExtResource("7_kjv4t")]
+position = Vector2(3025, 560)
+
+[node name="spikes51" parent="." unique_id=657822403 instance=ExtResource("7_kjv4t")]
+position = Vector2(3057, 560)
+
+[node name="spikes52" parent="." unique_id=882570827 instance=ExtResource("7_kjv4t")]
+position = Vector2(3089, 560)
+
+[node name="spikes53" parent="." unique_id=1582480534 instance=ExtResource("7_kjv4t")]
+position = Vector2(3121, 560)
+
+[node name="spikes54" parent="." unique_id=1331694008 instance=ExtResource("7_kjv4t")]
+position = Vector2(3153, 560)
+
+[node name="spike_head" parent="." unique_id=538994854 instance=ExtResource("9_5rvl0")]
+position = Vector2(3246, 263)
+attack_direction = 3
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1822154266]
+position = Vector2(2541, 383)
+curve = SubResource("Curve2D_5rvl0")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1009971406]
+position = Vector2(-74, 39)
+rotation = -0.3385557
+rotates = false
+
+[node name="moving_platform_1" parent="Path2D/PathFollow2D" unique_id=1127136398 instance=ExtResource("8_ovfo5")]
+rotation = 0.34906584
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D" unique_id=244473817]
+libraries/ = SubResource("AnimationLibrary_hydky")
+autoplay = &"new_animation"
+
+[node name="Path2D2" type="Path2D" parent="." unique_id=1298852180]
+position = Vector2(15, 0)
+curve = SubResource("Curve2D_hydky")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2" unique_id=1356853586]
+position = Vector2(3531, -151)
+rotation = 1.5783719
+rotates = false
+loop = false
+
+[node name="moving_platform_2" parent="Path2D2/PathFollow2D" unique_id=403165432 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D2/PathFollow2D" unique_id=1309054231]
+libraries/ = SubResource("AnimationLibrary_u0wn7")
+autoplay = &"new_animation"
+
+[node name="PathFollow2D2" type="PathFollow2D" parent="Path2D2" unique_id=1195559903]
+position = Vector2(3530.9998, 311.4999)
+rotation = 1.5741746
+progress = 462.5
+rotates = false
+loop = false
+
+[node name="moving_platform_1" parent="Path2D2/PathFollow2D2" unique_id=1121892536 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D2/PathFollow2D2" unique_id=1551512266]
+libraries/ = SubResource("AnimationLibrary_tni3a")
+autoplay = &"new_animation"
+
+[node name="PathFollow2D3" type="PathFollow2D" parent="Path2D2" unique_id=1209298525]
+position = Vector2(3531, 80.24633)
+rotation = 1.5741746
+progress = 231.25
+rotates = false
+loop = false
+
+[node name="moving_platform_1" parent="Path2D2/PathFollow2D3" unique_id=576479385 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D2/PathFollow2D3" unique_id=2081418179]
+libraries/ = SubResource("AnimationLibrary_rt723")
+autoplay = &"new_animation"
+
+[node name="PathFollow2D4" type="PathFollow2D" parent="Path2D2" unique_id=1576114048]
+position = Vector2(3531, 542.7536)
+rotation = 1.5636022
+progress = 693.75
+rotates = false
+loop = false
+
+[node name="moving_platform_1" parent="Path2D2/PathFollow2D4" unique_id=89084045 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D2/PathFollow2D4" unique_id=812288450]
+libraries/ = SubResource("AnimationLibrary_d23nm")
+autoplay = &"new_animation"
+
+[node name="Path2D3" type="Path2D" parent="." unique_id=1579182117]
+position = Vector2(116, 0)
+curve = SubResource("Curve2D_mxvv3")
+
+[node name="2" type="PathFollow2D" parent="Path2D3" unique_id=286251573]
+position = Vector2(3795, 760)
+rotation = -1.5772758
+rotates = false
+loop = false
+
+[node name="moving_platform_1" parent="Path2D3/2" unique_id=300232744 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D3/2" unique_id=920242396]
+root_node = NodePath("../../..")
+libraries/ = SubResource("AnimationLibrary_8l5ss")
+autoplay = &"new_animation"
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D3" unique_id=1144332363]
+position = Vector2(3795, 528.0037)
+rotation = -1.5772758
+progress = 231.99997
+rotates = false
+loop = false
+
+[node name="moving_platform_1" parent="Path2D3/PathFollow2D" unique_id=649246258 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D3/PathFollow2D" unique_id=2038723950]
+libraries/ = SubResource("AnimationLibrary_aiur6")
+autoplay = &"new_animation"
+
+[node name="PathFollow2D2" type="PathFollow2D" parent="Path2D3" unique_id=1867115168]
+position = Vector2(3794.9998, 296.0001)
+rotation = -1.5772758
+progress = 463.99994
+rotates = false
+loop = false
+
+[node name="moving_platform_1" parent="Path2D3/PathFollow2D2" unique_id=328304206 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D3/PathFollow2D2" unique_id=1010648891]
+libraries/ = SubResource("AnimationLibrary_rr0fq")
+autoplay = &"new_animation"
+
+[node name="PathFollow2D3" type="PathFollow2D" parent="Path2D3" unique_id=2061597120]
+position = Vector2(3795, 63.996525)
+rotation = -1.5707964
+progress = 695.9999
+
+[node name="moving_platform_1" parent="Path2D3/PathFollow2D3" unique_id=579109474 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D3/PathFollow2D3" unique_id=192880034]
+libraries/ = SubResource("AnimationLibrary_ylwo6")
+autoplay = &"new_animation"
+
+[node name="Path2D4" type="Path2D" parent="." unique_id=1987261702]
+position = Vector2(208, 0)
+curve = SubResource("Curve2D_jtht8")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D4" unique_id=1171111514]
+position = Vector2(4065, -163)
+rotation = 1.5707964
+rotates = false
+loop = false
+
+[node name="moving_platform_1" parent="Path2D4/PathFollow2D" unique_id=1029702188 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D4/PathFollow2D" unique_id=1384433334]
+libraries/ = SubResource("AnimationLibrary_tggmf")
+autoplay = &"new_animation"
+
+[node name="PathFollow2D2" type="PathFollow2D" parent="Path2D4" unique_id=383310868]
+position = Vector2(4065, 70.496346)
+rotation = 1.5707964
+progress = 233.50003
+rotates = false
+loop = false
+
+[node name="moving_platform_1" parent="Path2D4/PathFollow2D2" unique_id=418606659 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D4/PathFollow2D2" unique_id=518541063]
+libraries/ = SubResource("AnimationLibrary_i2ofy")
+autoplay = &"new_animation"
+
+[node name="PathFollow2D3" type="PathFollow2D" parent="Path2D4" unique_id=1402535576]
+position = Vector2(4065, 303.99985)
+rotation = 1.5707964
+progress = 467.00006
+rotates = false
+loop = false
+
+[node name="moving_platform_1" parent="Path2D4/PathFollow2D3" unique_id=1550874442 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D4/PathFollow2D3" unique_id=684573850]
+libraries/ = SubResource("AnimationLibrary_flyfn")
+autoplay = &"new_animation"
+
+[node name="PathFollow2D4" type="PathFollow2D" parent="Path2D4" unique_id=1447909891]
+position = Vector2(4065, 537.5037)
+rotation = 1.5707964
+progress = 700.5001
+
+[node name="moving_platform_1" parent="Path2D4/PathFollow2D4" unique_id=1492066430 instance=ExtResource("8_ovfo5")]
+rotation = 1.5707964
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D4/PathFollow2D4" unique_id=1056955350]
+libraries/ = SubResource("AnimationLibrary_qb274")
+autoplay = &"new_animation"
+
+[node name="end" parent="." unique_id=1738161801 instance=ExtResource("12_aiur6")]
+position = Vector2(6463, 416)
+next_level = "uid://nnefjs6mxalw"
+
+[node name="SpikeBall" parent="." unique_id=94177089 instance=ExtResource("11_wgqrc")]
+position = Vector2(4976, 401)
+
+[node name="SpikeBall2" parent="." unique_id=1013809710 instance=ExtResource("11_wgqrc")]
+position = Vector2(5326, 404)
+
+[node name="SpikeBall3" parent="." unique_id=2089032225 instance=ExtResource("11_wgqrc")]
+position = Vector2(5680, 406)
+
+[node name="fire" parent="." unique_id=1958292535 instance=ExtResource("12_eqh2a")]
+position = Vector2(4976, 545)
+
+[node name="fire2" parent="." unique_id=2089274142 instance=ExtResource("12_eqh2a")]
+position = Vector2(5328, 545)
+
+[node name="fire3" parent="." unique_id=146053595 instance=ExtResource("12_eqh2a")]
+position = Vector2(5680, 545)
+
+[node name="fire4" parent="." unique_id=387596957 instance=ExtResource("12_eqh2a")]
+position = Vector2(4943, 545)
+start_delay = 0.1
+
+[node name="fire5" parent="." unique_id=71079775 instance=ExtResource("12_eqh2a")]
+position = Vector2(5295, 545)
+start_delay = 0.1
+
+[node name="fire6" parent="." unique_id=2143751100 instance=ExtResource("12_eqh2a")]
+position = Vector2(5647, 545)
+start_delay = 0.1
+
+[node name="fire7" parent="." unique_id=699402896 instance=ExtResource("12_eqh2a")]
+position = Vector2(5008, 545)
+start_delay = 0.1
+
+[node name="fire8" parent="." unique_id=55023142 instance=ExtResource("12_eqh2a")]
+position = Vector2(5360, 545)
+start_delay = 0.1
+
+[node name="fire9" parent="." unique_id=1062662593 instance=ExtResource("12_eqh2a")]
+position = Vector2(5712, 545)
+start_delay = 0.1
+
+[node name="fruit17" parent="." unique_id=834238023 instance=ExtResource("5_tni3a")]
+position = Vector2(2680, 347)
+
+[node name="fruit18" parent="." unique_id=755129044 instance=ExtResource("5_tni3a")]
+position = Vector2(2712, 347)
+
+[node name="fruit19" parent="." unique_id=346436884 instance=ExtResource("5_tni3a")]
+position = Vector2(2746, 347)
+fruitType = "banana"
+
+[node name="fruit20" parent="." unique_id=88213163 instance=ExtResource("5_tni3a")]
+position = Vector2(2778, 347)
+fruitType = "cherry"
+
+[node name="fruit21" parent="." unique_id=718491991 instance=ExtResource("5_tni3a")]
+position = Vector2(2813, 347)
+fruitType = "cherry"
+
+[node name="fruit22" parent="." unique_id=720720206 instance=ExtResource("5_tni3a")]
+position = Vector2(2845, 347)
+fruitType = "banana"
+
+[node name="fruit23" parent="." unique_id=1810709752 instance=ExtResource("5_tni3a")]
+position = Vector2(2879, 347)
+
+[node name="fruit24" parent="." unique_id=535516215 instance=ExtResource("5_tni3a")]
+position = Vector2(2911, 347)
+
+[node name="fruit25" parent="." unique_id=497704229 instance=ExtResource("5_tni3a")]
+position = Vector2(3246, 435)
+
+[node name="fruit26" parent="." unique_id=888725278 instance=ExtResource("5_tni3a")]
+position = Vector2(3246, 407)
+fruitType = "banana"
+
+[node name="fruit27" parent="." unique_id=1483513763 instance=ExtResource("5_tni3a")]
+position = Vector2(3247, 376)
+fruitType = "cherry"
+
+[node name="fruit28" parent="." unique_id=877739996 instance=ExtResource("5_tni3a")]
+position = Vector2(3544, 501)
+
+[node name="fruit29" parent="." unique_id=1543350031 instance=ExtResource("5_tni3a")]
+position = Vector2(3544, 473)
+fruitType = "banana"
+
+[node name="fruit30" parent="." unique_id=1177480972 instance=ExtResource("5_tni3a")]
+position = Vector2(3545, 442)
+fruitType = "cherry"
+
+[node name="fruit31" parent="." unique_id=1321009546 instance=ExtResource("5_tni3a")]
+position = Vector2(3546, 226)
+
+[node name="fruit32" parent="." unique_id=1180883778 instance=ExtResource("5_tni3a")]
+position = Vector2(3546, 198)
+fruitType = "banana"
+
+[node name="fruit33" parent="." unique_id=346046962 instance=ExtResource("5_tni3a")]
+position = Vector2(3547, 167)
+fruitType = "cherry"
+
+[node name="fruit34" parent="." unique_id=568913322 instance=ExtResource("5_tni3a")]
+position = Vector2(4270, 492)
+
+[node name="fruit35" parent="." unique_id=1606894452 instance=ExtResource("5_tni3a")]
+position = Vector2(4270, 464)
+fruitType = "banana"
+
+[node name="fruit36" parent="." unique_id=2101618516 instance=ExtResource("5_tni3a")]
+position = Vector2(4271, 433)
+fruitType = "cherry"
+
+[node name="fruit37" parent="." unique_id=977203344 instance=ExtResource("5_tni3a")]
+position = Vector2(4272, 217)
+
+[node name="fruit38" parent="." unique_id=1391358994 instance=ExtResource("5_tni3a")]
+position = Vector2(4272, 189)
+fruitType = "banana"
+
+[node name="fruit39" parent="." unique_id=118781906 instance=ExtResource("5_tni3a")]
+position = Vector2(4273, 158)
+fruitType = "cherry"
+
+[node name="fruit40" parent="." unique_id=1695594557 instance=ExtResource("5_tni3a")]
+position = Vector2(3908, 349)
+
+[node name="fruit41" parent="." unique_id=1389542015 instance=ExtResource("5_tni3a")]
+position = Vector2(3908, 321)
+fruitType = "banana"
+
+[node name="fruit42" parent="." unique_id=1715787592 instance=ExtResource("5_tni3a")]
+position = Vector2(3909, 290)
+fruitType = "cherry"
+
+[node name="fruit43" parent="." unique_id=557354093 instance=ExtResource("5_tni3a")]
+position = Vector2(3614, 399)
+
+[node name="fruit44" parent="." unique_id=2018024472 instance=ExtResource("5_tni3a")]
+position = Vector2(3667, 361)
+fruitType = "banana"
+
+[node name="fruit45" parent="." unique_id=859564328 instance=ExtResource("5_tni3a")]
+position = Vector2(3724, 343)
+fruitType = "cherry"
+
+[node name="fruit46" parent="." unique_id=876126883 instance=ExtResource("5_tni3a")]
+position = Vector2(3786, 361)
+fruitType = "banana"
+
+[node name="fruit47" parent="." unique_id=2124627443 instance=ExtResource("5_tni3a")]
+position = Vector2(3836, 413)
+
+[node name="fruit48" parent="." unique_id=13530288 instance=ExtResource("5_tni3a")]
+position = Vector2(3986, 241)
+
+[node name="fruit49" parent="." unique_id=1110472580 instance=ExtResource("5_tni3a")]
+position = Vector2(4039, 203)
+fruitType = "banana"
+
+[node name="fruit50" parent="." unique_id=736077399 instance=ExtResource("5_tni3a")]
+position = Vector2(4096, 185)
+fruitType = "cherry"
+
+[node name="fruit51" parent="." unique_id=1984688217 instance=ExtResource("5_tni3a")]
+position = Vector2(4158, 203)
+fruitType = "banana"
+
+[node name="fruit52" parent="." unique_id=340367603 instance=ExtResource("5_tni3a")]
+position = Vector2(4208, 255)
+
+[node name="fruit53" parent="." unique_id=1555597504 instance=ExtResource("5_tni3a")]
+position = Vector2(4880, 553)
+
+[node name="fruit54" parent="." unique_id=692969330 instance=ExtResource("5_tni3a")]
+position = Vector2(4916, 509)
+fruitType = "banana"
+
+[node name="fruit55" parent="." unique_id=1860928829 instance=ExtResource("5_tni3a")]
+position = Vector2(4973, 491)
+fruitType = "cherry"
+
+[node name="fruit56" parent="." unique_id=1948307357 instance=ExtResource("5_tni3a")]
+position = Vector2(5035, 509)
+fruitType = "banana"
+
+[node name="fruit57" parent="." unique_id=34818572 instance=ExtResource("5_tni3a")]
+position = Vector2(5075, 553)
+
+[node name="fruit58" parent="." unique_id=37744349 instance=ExtResource("5_tni3a")]
+position = Vector2(5233, 556)
+
+[node name="fruit59" parent="." unique_id=1357482182 instance=ExtResource("5_tni3a")]
+position = Vector2(5269, 512)
+fruitType = "banana"
+
+[node name="fruit60" parent="." unique_id=3409951 instance=ExtResource("5_tni3a")]
+position = Vector2(5326, 494)
+fruitType = "cherry"
+
+[node name="fruit61" parent="." unique_id=1844108418 instance=ExtResource("5_tni3a")]
+position = Vector2(5388, 512)
+fruitType = "banana"
+
+[node name="fruit62" parent="." unique_id=1733743747 instance=ExtResource("5_tni3a")]
+position = Vector2(5428, 556)
+
+[node name="fruit63" parent="." unique_id=1763729875 instance=ExtResource("5_tni3a")]
+position = Vector2(5583, 557)
+
+[node name="fruit64" parent="." unique_id=1560630480 instance=ExtResource("5_tni3a")]
+position = Vector2(5619, 513)
+fruitType = "banana"
+
+[node name="fruit65" parent="." unique_id=1648065765 instance=ExtResource("5_tni3a")]
+position = Vector2(5676, 495)
+fruitType = "cherry"
+
+[node name="fruit66" parent="." unique_id=1876697767 instance=ExtResource("5_tni3a")]
+position = Vector2(5738, 513)
+fruitType = "banana"
+
+[node name="fruit67" parent="." unique_id=793260720 instance=ExtResource("5_tni3a")]
+position = Vector2(5778, 557)
+
+[node name="Logo2" type="Sprite2D" parent="." unique_id=1737563634]
+z_index = 2
+position = Vector2(2352.4998, 552.56256)
+scale = Vector2(0.24579866, 0.27595222)
+texture = ExtResource("13_u0wn7")
+
+[node name="Logo3" type="Sprite2D" parent="." unique_id=1882127643]
+z_index = 2
+position = Vector2(3251.2495, 559.28125)
+scale = Vector2(0.26785794, 0.29226184)
+texture = ExtResource("13_u0wn7")
+
+[node name="Logo4" type="Sprite2D" parent="." unique_id=731376347]
+z_index = 2
+position = Vector2(4529, 559.99994)
+scale = Vector2(0.26785794, 0.29226184)
+texture = ExtResource("13_u0wn7")
+
+[node name="checkpoint" parent="." unique_id=1843797229 instance=ExtResource("14_d23nm")]
+position = Vector2(2188, 512)
+
+[node name="checkpoint2" parent="." unique_id=1238882592 instance=ExtResource("14_d23nm")]
+position = Vector2(4534, 383)

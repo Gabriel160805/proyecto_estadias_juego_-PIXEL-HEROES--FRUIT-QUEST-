@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://5x5f3gb2e3jh"]
+
+[ext_resource type="Texture2D" uid="uid://d3e7svt621ju6" path="res://assets_2/DarkForest/DarkForest_Background.png" id="1_3ivvt"]
+[ext_resource type="Texture2D" uid="uid://co42yjhxmt8oy" path="res://assets_2/DarkForest/DarkForest_Shadow.png" id="2_ico1r"]
+[ext_resource type="Texture2D" uid="uid://c1pc6qv2ka05q" path="res://assets_2/DarkForest/DarkForest_Middleground.png" id="3_kichi"]
+[ext_resource type="Texture2D" uid="uid://ymc2ah53nnc" path="res://assets_2/DarkForest/DarkForest_Foreground.png" id="4_ufi5e"]
+
+[node name="dark_forest" type="ParallaxBackground" unique_id=2057598182]
+
+[node name="fondo_verde" type="ParallaxLayer" parent="." unique_id=618691489]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sky" type="Sprite2D" parent="fondo_verde" unique_id=1024808776]
+position = Vector2(576, 324.49997)
+scale = Vector2(3.6000001, 3.6055553)
+texture = ExtResource("1_3ivvt")
+
+[node name="gris_verde" type="ParallaxLayer" parent="." unique_id=1479756229]
+motion_scale = Vector2(1.2, 1.2)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="MiddleLayer" type="Sprite2D" parent="gris_verde" unique_id=1222391903]
+position = Vector2(576, 324)
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("3_kichi")
+
+[node name="luz" type="ParallaxLayer" parent="." unique_id=1580310759]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="MiddleLayer" type="Sprite2D" parent="luz" unique_id=1755230402]
+modulate = Color(0.9490196, 0.96862745, 0.9411765, 0.62352943)
+position = Vector2(576, 326)
+scale = Vector2(3.5999997, 3.622222)
+texture = ExtResource("2_ico1r")
+
+[node name="frontal" type="ParallaxLayer" parent="." unique_id=561073047]
+motion_scale = Vector2(1.4, 1.4)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="MiddleLayer" type="Sprite2D" parent="frontal" unique_id=104880384]
+position = Vector2(578.5, 325)
+scale = Vector2(3.6031249, 3.6)
+texture = ExtResource("4_ufi5e")

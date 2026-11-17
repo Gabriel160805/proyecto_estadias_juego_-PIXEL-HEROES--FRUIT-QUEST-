@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://dplfoph7x7bad"]
+
+[ext_resource type="Texture2D" uid="uid://p8asbmbptypc" path="res://Assets/Traps/Falling Platforms/Off.png" id="1_d463x"]
+[ext_resource type="Texture2D" uid="uid://egtugr3u5f2g" path="res://Assets/Traps/Falling Platforms/On (32x10).png" id="2_06ww8"]
+[ext_resource type="Script" path="res://Scripts/falling_platform.gd" id="3_falling_platform_script"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7kq4"]
+atlas = ExtResource("1_d463x")
+region = Rect2(0, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_riehy"]
+atlas = ExtResource("2_06ww8")
+region = Rect2(0, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2btjm"]
+atlas = ExtResource("2_06ww8")
+region = Rect2(32, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5h6bx"]
+atlas = ExtResource("2_06ww8")
+region = Rect2(64, 0, 32, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysh6q"]
+atlas = ExtResource("2_06ww8")
+region = Rect2(96, 0, 32, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0id7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7kq4")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_riehy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2btjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5h6bx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysh6q")
+}],
+"loop": true,
+"name": &"on",
+"speed": 25.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_575xa"]
+size = Vector2(32, 5.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d463x"]
+size = Vector2(27, 1)
+
+[node name="falling_platforms" type="Node2D" unique_id=1221400280]
+scale = Vector2(2, 2)
+script = ExtResource("3_falling_platform_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1510956478]
+sprite_frames = SubResource("SpriteFrames_0id7a")
+animation = &"on"
+frame_progress = 0.50141203
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=52895068]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=2028311515]
+position = Vector2(0, -2.25)
+shape = SubResource("RectangleShape2D_575xa")
+
+[node name="activation_area" type="Area2D" parent="." unique_id=730780522]
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="activation_area" unique_id=1892377094]
+modulate = Color(0.5942206, 0.6730207, 7.70092e-07, 1)
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_d463x")

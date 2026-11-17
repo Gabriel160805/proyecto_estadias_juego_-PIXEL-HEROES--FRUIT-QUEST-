@@ -1,0 +1,495 @@
+[gd_scene format=3 uid="uid://4tudwgtky3tq"]
+
+[ext_resource type="PackedScene" uid="uid://bdd1wkno8rycv" path="res://Scenes/day_forest.tscn" id="1_ieiw1"]
+[ext_resource type="PackedScene" uid="uid://dhtgrxtp0jfpj" path="res://Scenes/Escenarios/tiles/escenario_level_1_1.tscn" id="2_c0p4y"]
+[ext_resource type="PackedScene" uid="uid://ovhlo3b4meo5" path="res://Scenes/enviroment/start.tscn" id="3_ey6qb"]
+[ext_resource type="PackedScene" uid="uid://7ocysfmg44ka" path="res://Scenes/enviroment/trampoline.tscn" id="4_jr08e"]
+[ext_resource type="PackedScene" uid="uid://doh1triqqbvw5" path="res://Scenes/enviroment/fruit.tscn" id="5_4vrwi"]
+[ext_resource type="PackedScene" uid="uid://3iuxnr7b4611" path="res://Scenes/enviroment/checkpoint.tscn" id="6_ggoug"]
+[ext_resource type="PackedScene" uid="uid://ddddm2yxelmbm" path="res://Scenes/Enemys/spikes.tscn" id="7_4v6h2"]
+[ext_resource type="PackedScene" uid="uid://dplfoph7x7bad" path="res://Scenes/enviroment/falling_platforms.tscn" id="8_h32nd"]
+[ext_resource type="Texture2D" uid="uid://dbjrwq7id15ve" path="res://Assets/logo_upgop.png" id="9_45hqr"]
+[ext_resource type="PackedScene" uid="uid://bi7nrppo7yjxc" path="res://Scenes/Enemys/saw.tscn" id="10_drlub"]
+[ext_resource type="PackedScene" uid="uid://yki55sp341ep" path="res://Scenes/Enemys/spike_ball.tscn" id="11_yrof7"]
+[ext_resource type="PackedScene" uid="uid://djd4r14hpduk6" path="res://Scenes/enviroment/end.tscn" id="12_8jmjw"]
+
+[node name="Node2D" type="Node2D" unique_id=838742884]
+
+[node name="day_forest" parent="." unique_id=2057598182 instance=ExtResource("1_ieiw1")]
+
+[node name="Node" parent="." unique_id=834446824 instance=ExtResource("2_c0p4y")]
+
+[node name="Start" parent="." unique_id=851152876 instance=ExtResource("3_ey6qb")]
+position = Vector2(137, 511)
+
+[node name="trampoline" parent="." unique_id=390938680 instance=ExtResource("4_jr08e")]
+position = Vector2(1925, 549)
+
+[node name="trampoline2" parent="." unique_id=1113320244 instance=ExtResource("4_jr08e")]
+position = Vector2(2820, 548)
+
+[node name="fruit" parent="." unique_id=2040657729 instance=ExtResource("5_4vrwi")]
+position = Vector2(816, 404)
+
+[node name="fruit2" parent="." unique_id=1900545826 instance=ExtResource("5_4vrwi")]
+position = Vector2(847, 404)
+
+[node name="fruit3" parent="." unique_id=1632265132 instance=ExtResource("5_4vrwi")]
+position = Vector2(1488, 386)
+fruitType = "cherry"
+
+[node name="fruit4" parent="." unique_id=19617162 instance=ExtResource("5_4vrwi")]
+position = Vector2(1517, 386)
+fruitType = "cherry"
+
+[node name="fruit5" parent="." unique_id=974661309 instance=ExtResource("5_4vrwi")]
+position = Vector2(1446, 407)
+fruitType = "banana"
+
+[node name="fruit6" parent="." unique_id=151185192 instance=ExtResource("5_4vrwi")]
+position = Vector2(1561, 407)
+fruitType = "banana"
+
+[node name="fruit7" parent="." unique_id=1136191161 instance=ExtResource("5_4vrwi")]
+position = Vector2(1417, 442)
+
+[node name="fruit8" parent="." unique_id=1996320159 instance=ExtResource("5_4vrwi")]
+position = Vector2(1589, 443)
+
+[node name="fruit9" parent="." unique_id=349218945 instance=ExtResource("5_4vrwi")]
+position = Vector2(1924, 532)
+fruitType = "cherry"
+
+[node name="fruit10" parent="." unique_id=1221653652 instance=ExtResource("5_4vrwi")]
+position = Vector2(1923, 481)
+fruitType = "banana"
+
+[node name="fruit11" parent="." unique_id=1566228929 instance=ExtResource("5_4vrwi")]
+position = Vector2(1923, 431)
+
+[node name="fruit12" parent="." unique_id=213503033 instance=ExtResource("5_4vrwi")]
+position = Vector2(1923, 376)
+
+[node name="fruit13" parent="." unique_id=927581337 instance=ExtResource("5_4vrwi")]
+position = Vector2(2414, 431)
+
+[node name="fruit14" parent="." unique_id=305603932 instance=ExtResource("5_4vrwi")]
+position = Vector2(2353, 337)
+fruitType = "banana"
+
+[node name="fruit15" parent="." unique_id=630856829 instance=ExtResource("5_4vrwi")]
+position = Vector2(2445, 235)
+fruitType = "cherry"
+
+[node name="fruit16" parent="." unique_id=1098210251 instance=ExtResource("5_4vrwi")]
+position = Vector2(2819, 530)
+
+[node name="fruit17" parent="." unique_id=2066151170 instance=ExtResource("5_4vrwi")]
+position = Vector2(2829, 208)
+fruitType = "banana"
+
+[node name="fruit18" parent="." unique_id=1551624791 instance=ExtResource("5_4vrwi")]
+position = Vector2(2864, 110)
+fruitType = "cherry"
+
+[node name="checkpoint" parent="." unique_id=1843797229 instance=ExtResource("6_ggoug")]
+position = Vector2(3059, 513)
+
+[node name="spikes" parent="." unique_id=1376819864 instance=ExtResource("7_4v6h2")]
+position = Vector2(3287, 592)
+
+[node name="spikes2" parent="." unique_id=1943769474 instance=ExtResource("7_4v6h2")]
+position = Vector2(3320, 592)
+
+[node name="spikes3" parent="." unique_id=778391968 instance=ExtResource("7_4v6h2")]
+position = Vector2(3353, 592)
+
+[node name="spikes4" parent="." unique_id=1094509146 instance=ExtResource("7_4v6h2")]
+position = Vector2(3386, 592)
+
+[node name="spikes5" parent="." unique_id=1569102934 instance=ExtResource("7_4v6h2")]
+position = Vector2(3418, 592)
+
+[node name="spikes6" parent="." unique_id=1513157805 instance=ExtResource("7_4v6h2")]
+position = Vector2(3451, 592)
+
+[node name="spikes7" parent="." unique_id=1595982532 instance=ExtResource("7_4v6h2")]
+position = Vector2(3484, 592)
+
+[node name="spikes8" parent="." unique_id=1154945547 instance=ExtResource("7_4v6h2")]
+position = Vector2(3517, 592)
+
+[node name="spikes9" parent="." unique_id=10733273 instance=ExtResource("7_4v6h2")]
+position = Vector2(3549, 592)
+
+[node name="spikes10" parent="." unique_id=870977706 instance=ExtResource("7_4v6h2")]
+position = Vector2(3582, 592)
+
+[node name="spikes11" parent="." unique_id=2039753537 instance=ExtResource("7_4v6h2")]
+position = Vector2(3615, 592)
+
+[node name="spikes12" parent="." unique_id=2013662009 instance=ExtResource("7_4v6h2")]
+position = Vector2(3648, 592)
+
+[node name="spikes13" parent="." unique_id=907150384 instance=ExtResource("7_4v6h2")]
+position = Vector2(3680, 592)
+
+[node name="spikes14" parent="." unique_id=449311256 instance=ExtResource("7_4v6h2")]
+position = Vector2(3713, 592)
+
+[node name="spikes15" parent="." unique_id=850024207 instance=ExtResource("7_4v6h2")]
+position = Vector2(3746, 592)
+
+[node name="spikes16" parent="." unique_id=1778955611 instance=ExtResource("7_4v6h2")]
+position = Vector2(3779, 592)
+
+[node name="spikes17" parent="." unique_id=1387686492 instance=ExtResource("7_4v6h2")]
+position = Vector2(3811, 592)
+
+[node name="spikes18" parent="." unique_id=1045514481 instance=ExtResource("7_4v6h2")]
+position = Vector2(3844, 592)
+
+[node name="spikes19" parent="." unique_id=66441820 instance=ExtResource("7_4v6h2")]
+position = Vector2(3877, 592)
+
+[node name="spikes20" parent="." unique_id=1475761427 instance=ExtResource("7_4v6h2")]
+position = Vector2(3910, 592)
+
+[node name="spikes21" parent="." unique_id=1822935928 instance=ExtResource("7_4v6h2")]
+position = Vector2(3942, 592)
+
+[node name="spikes22" parent="." unique_id=417761099 instance=ExtResource("7_4v6h2")]
+position = Vector2(3975, 592)
+
+[node name="spikes23" parent="." unique_id=598092982 instance=ExtResource("7_4v6h2")]
+position = Vector2(4008, 592)
+
+[node name="spikes24" parent="." unique_id=279338309 instance=ExtResource("7_4v6h2")]
+position = Vector2(4041, 592)
+
+[node name="spikes25" parent="." unique_id=1687020728 instance=ExtResource("7_4v6h2")]
+position = Vector2(4073, 592)
+
+[node name="spikes26" parent="." unique_id=110979081 instance=ExtResource("7_4v6h2")]
+position = Vector2(4106, 592)
+
+[node name="spikes27" parent="." unique_id=81839481 instance=ExtResource("7_4v6h2")]
+position = Vector2(4139, 592)
+
+[node name="spikes28" parent="." unique_id=35008359 instance=ExtResource("7_4v6h2")]
+position = Vector2(4172, 592)
+
+[node name="spikes29" parent="." unique_id=339240361 instance=ExtResource("7_4v6h2")]
+position = Vector2(4204, 592)
+
+[node name="falling_platforms" parent="." unique_id=1221400280 instance=ExtResource("8_h32nd")]
+position = Vector2(3428, 525)
+
+[node name="falling_platforms2" parent="." unique_id=553079511 instance=ExtResource("8_h32nd")]
+position = Vector2(3712, 425)
+
+[node name="falling_platforms3" parent="." unique_id=1315300061 instance=ExtResource("8_h32nd")]
+position = Vector2(4012, 520)
+
+[node name="logo_upgop" type="Sprite2D" parent="." unique_id=1546602431]
+z_index = 2
+position = Vector2(4502.3755, 576.375)
+scale = Vector2(0.49128807, 0.52946776)
+texture = ExtResource("9_45hqr")
+
+[node name="saw" parent="." unique_id=1089379094 instance=ExtResource("10_drlub")]
+position = Vector2(4268, 476)
+
+[node name="saw2" parent="." unique_id=1006842249 instance=ExtResource("10_drlub")]
+position = Vector2(4728, 476)
+
+[node name="fruit19" parent="." unique_id=756078899 instance=ExtResource("5_4vrwi")]
+position = Vector2(3410, 494)
+
+[node name="fruit20" parent="." unique_id=1440330765 instance=ExtResource("5_4vrwi")]
+position = Vector2(3443, 493)
+
+[node name="fruit21" parent="." unique_id=243952245 instance=ExtResource("5_4vrwi")]
+position = Vector2(3694, 394)
+fruitType = "banana"
+
+[node name="fruit22" parent="." unique_id=992142191 instance=ExtResource("5_4vrwi")]
+position = Vector2(3725, 393)
+fruitType = "banana"
+
+[node name="fruit23" parent="." unique_id=230268596 instance=ExtResource("5_4vrwi")]
+position = Vector2(3997, 490)
+fruitType = "cherry"
+
+[node name="fruit24" parent="." unique_id=842582652 instance=ExtResource("5_4vrwi")]
+position = Vector2(4025, 490)
+fruitType = "cherry"
+
+[node name="fruit25" parent="." unique_id=596815207 instance=ExtResource("5_4vrwi")]
+position = Vector2(4359, 376)
+fruitType = "cherry"
+
+[node name="fruit26" parent="." unique_id=666576066 instance=ExtResource("5_4vrwi")]
+position = Vector2(4388, 376)
+fruitType = "cherry"
+
+[node name="fruit27" parent="." unique_id=924110189 instance=ExtResource("5_4vrwi")]
+position = Vector2(4317, 397)
+fruitType = "banana"
+
+[node name="fruit28" parent="." unique_id=832545630 instance=ExtResource("5_4vrwi")]
+position = Vector2(4432, 397)
+fruitType = "banana"
+
+[node name="fruit29" parent="." unique_id=2077737917 instance=ExtResource("5_4vrwi")]
+position = Vector2(4288, 432)
+
+[node name="fruit30" parent="." unique_id=206175144 instance=ExtResource("5_4vrwi")]
+position = Vector2(4460, 433)
+
+[node name="fruit31" parent="." unique_id=2142565658 instance=ExtResource("5_4vrwi")]
+position = Vector2(4619, 376)
+fruitType = "cherry"
+
+[node name="fruit32" parent="." unique_id=2130252326 instance=ExtResource("5_4vrwi")]
+position = Vector2(4648, 376)
+fruitType = "cherry"
+
+[node name="fruit33" parent="." unique_id=553190644 instance=ExtResource("5_4vrwi")]
+position = Vector2(4577, 397)
+fruitType = "banana"
+
+[node name="fruit34" parent="." unique_id=13202044 instance=ExtResource("5_4vrwi")]
+position = Vector2(4692, 397)
+fruitType = "banana"
+
+[node name="fruit35" parent="." unique_id=31739108 instance=ExtResource("5_4vrwi")]
+position = Vector2(4548, 432)
+
+[node name="fruit36" parent="." unique_id=217426429 instance=ExtResource("5_4vrwi")]
+position = Vector2(4720, 433)
+
+[node name="spikes30" parent="." unique_id=21033472 instance=ExtResource("7_4v6h2")]
+position = Vector2(4784, 560)
+
+[node name="spikes31" parent="." unique_id=2089613115 instance=ExtResource("7_4v6h2")]
+position = Vector2(4817, 560)
+
+[node name="spikes32" parent="." unique_id=129136876 instance=ExtResource("7_4v6h2")]
+position = Vector2(4850, 560)
+
+[node name="spikes33" parent="." unique_id=354057246 instance=ExtResource("7_4v6h2")]
+position = Vector2(4883, 560)
+
+[node name="spikes34" parent="." unique_id=434102985 instance=ExtResource("7_4v6h2")]
+position = Vector2(4915, 560)
+
+[node name="spikes35" parent="." unique_id=873062878 instance=ExtResource("7_4v6h2")]
+position = Vector2(4948, 560)
+
+[node name="spikes36" parent="." unique_id=1539242842 instance=ExtResource("7_4v6h2")]
+position = Vector2(4981, 560)
+
+[node name="spikes37" parent="." unique_id=1634494861 instance=ExtResource("7_4v6h2")]
+position = Vector2(5014, 560)
+
+[node name="spikes38" parent="." unique_id=1001414384 instance=ExtResource("7_4v6h2")]
+position = Vector2(5046, 560)
+
+[node name="spikes39" parent="." unique_id=793257806 instance=ExtResource("7_4v6h2")]
+position = Vector2(5079, 560)
+
+[node name="spikes40" parent="." unique_id=1762146700 instance=ExtResource("7_4v6h2")]
+position = Vector2(5112, 560)
+
+[node name="spikes41" parent="." unique_id=1284064568 instance=ExtResource("7_4v6h2")]
+position = Vector2(5145, 560)
+
+[node name="spikes42" parent="." unique_id=1085778935 instance=ExtResource("7_4v6h2")]
+position = Vector2(5177, 560)
+
+[node name="spikes43" parent="." unique_id=410271183 instance=ExtResource("7_4v6h2")]
+position = Vector2(5210, 560)
+
+[node name="spikes44" parent="." unique_id=331793117 instance=ExtResource("7_4v6h2")]
+position = Vector2(5243, 560)
+
+[node name="spikes45" parent="." unique_id=488396217 instance=ExtResource("7_4v6h2")]
+position = Vector2(5276, 560)
+
+[node name="spikes46" parent="." unique_id=1594214121 instance=ExtResource("7_4v6h2")]
+position = Vector2(5308, 560)
+
+[node name="spikes47" parent="." unique_id=137654844 instance=ExtResource("7_4v6h2")]
+position = Vector2(5341, 560)
+
+[node name="spikes48" parent="." unique_id=720906724 instance=ExtResource("7_4v6h2")]
+position = Vector2(5374, 560)
+
+[node name="spikes49" parent="." unique_id=1223786454 instance=ExtResource("7_4v6h2")]
+position = Vector2(5407, 560)
+
+[node name="spikes50" parent="." unique_id=318696185 instance=ExtResource("7_4v6h2")]
+position = Vector2(5439, 560)
+
+[node name="spikes51" parent="." unique_id=875159299 instance=ExtResource("7_4v6h2")]
+position = Vector2(5472, 560)
+
+[node name="spikes52" parent="." unique_id=744797215 instance=ExtResource("7_4v6h2")]
+position = Vector2(5505, 560)
+
+[node name="spikes53" parent="." unique_id=20663042 instance=ExtResource("7_4v6h2")]
+position = Vector2(5538, 560)
+
+[node name="spikes54" parent="." unique_id=650167454 instance=ExtResource("7_4v6h2")]
+position = Vector2(5570, 560)
+
+[node name="spikes55" parent="." unique_id=1045336136 instance=ExtResource("7_4v6h2")]
+position = Vector2(5603, 560)
+
+[node name="spikes56" parent="." unique_id=1250991971 instance=ExtResource("7_4v6h2")]
+position = Vector2(5636, 560)
+
+[node name="spikes57" parent="." unique_id=1893896397 instance=ExtResource("7_4v6h2")]
+position = Vector2(5669, 560)
+
+[node name="spikes58" parent="." unique_id=477352868 instance=ExtResource("7_4v6h2")]
+position = Vector2(5701, 560)
+
+[node name="spikes59" parent="." unique_id=1664964212 instance=ExtResource("7_4v6h2")]
+position = Vector2(5734, 560)
+
+[node name="spikes60" parent="." unique_id=161654706 instance=ExtResource("7_4v6h2")]
+position = Vector2(5767, 560)
+
+[node name="spikes61" parent="." unique_id=327476713 instance=ExtResource("7_4v6h2")]
+position = Vector2(5800, 560)
+
+[node name="spikes62" parent="." unique_id=589768252 instance=ExtResource("7_4v6h2")]
+position = Vector2(5832, 560)
+
+[node name="spikes63" parent="." unique_id=1495353103 instance=ExtResource("7_4v6h2")]
+position = Vector2(5865, 560)
+
+[node name="spikes64" parent="." unique_id=635019470 instance=ExtResource("7_4v6h2")]
+position = Vector2(5898, 560)
+
+[node name="spikes65" parent="." unique_id=1718995895 instance=ExtResource("7_4v6h2")]
+position = Vector2(5930, 560)
+
+[node name="spikes66" parent="." unique_id=611422091 instance=ExtResource("7_4v6h2")]
+position = Vector2(5963, 560)
+
+[node name="spikes67" parent="." unique_id=1101549511 instance=ExtResource("7_4v6h2")]
+position = Vector2(5996, 560)
+
+[node name="spikes68" parent="." unique_id=1326733870 instance=ExtResource("7_4v6h2")]
+position = Vector2(6029, 560)
+
+[node name="spikes69" parent="." unique_id=1560865658 instance=ExtResource("7_4v6h2")]
+position = Vector2(6061, 560)
+
+[node name="spikes70" parent="." unique_id=1242743300 instance=ExtResource("7_4v6h2")]
+position = Vector2(6094, 560)
+
+[node name="SpikeBall" parent="." unique_id=94177089 instance=ExtResource("11_yrof7")]
+position = Vector2(4976, 221)
+
+[node name="SpikeBall2" parent="." unique_id=1993803767 instance=ExtResource("11_yrof7")]
+position = Vector2(5296, 222)
+
+[node name="SpikeBall3" parent="." unique_id=509990076 instance=ExtResource("11_yrof7")]
+position = Vector2(5616, 221)
+
+[node name="SpikeBall4" parent="." unique_id=1128532906 instance=ExtResource("11_yrof7")]
+position = Vector2(5936, 222)
+
+[node name="fruit37" parent="." unique_id=160939834 instance=ExtResource("5_4vrwi")]
+position = Vector2(4902, 375)
+fruitType = "cherry"
+
+[node name="fruit38" parent="." unique_id=745047049 instance=ExtResource("5_4vrwi")]
+position = Vector2(4860, 396)
+fruitType = "banana"
+
+[node name="fruit39" parent="." unique_id=1143906575 instance=ExtResource("5_4vrwi")]
+position = Vector2(4831, 431)
+
+[node name="fruit40" parent="." unique_id=898028741 instance=ExtResource("5_4vrwi")]
+position = Vector2(5123, 355)
+fruitType = "cherry"
+
+[node name="fruit41" parent="." unique_id=1129596642 instance=ExtResource("5_4vrwi")]
+position = Vector2(5152, 355)
+fruitType = "cherry"
+
+[node name="fruit42" parent="." unique_id=333207882 instance=ExtResource("5_4vrwi")]
+position = Vector2(5081, 376)
+fruitType = "banana"
+
+[node name="fruit43" parent="." unique_id=398506270 instance=ExtResource("5_4vrwi")]
+position = Vector2(5196, 376)
+fruitType = "banana"
+
+[node name="fruit44" parent="." unique_id=926788370 instance=ExtResource("5_4vrwi")]
+position = Vector2(5052, 411)
+
+[node name="fruit45" parent="." unique_id=1740153572 instance=ExtResource("5_4vrwi")]
+position = Vector2(5224, 412)
+
+[node name="fruit46" parent="." unique_id=1282230140 instance=ExtResource("5_4vrwi")]
+position = Vector2(5442, 357)
+fruitType = "cherry"
+
+[node name="fruit47" parent="." unique_id=1669148192 instance=ExtResource("5_4vrwi")]
+position = Vector2(5471, 357)
+fruitType = "cherry"
+
+[node name="fruit48" parent="." unique_id=1807813674 instance=ExtResource("5_4vrwi")]
+position = Vector2(5400, 378)
+fruitType = "banana"
+
+[node name="fruit49" parent="." unique_id=474200378 instance=ExtResource("5_4vrwi")]
+position = Vector2(5515, 378)
+fruitType = "banana"
+
+[node name="fruit50" parent="." unique_id=206021151 instance=ExtResource("5_4vrwi")]
+position = Vector2(5371, 413)
+
+[node name="fruit51" parent="." unique_id=1586274174 instance=ExtResource("5_4vrwi")]
+position = Vector2(5543, 414)
+
+[node name="fruit52" parent="." unique_id=253490308 instance=ExtResource("5_4vrwi")]
+position = Vector2(5764, 359)
+fruitType = "cherry"
+
+[node name="fruit53" parent="." unique_id=701678304 instance=ExtResource("5_4vrwi")]
+position = Vector2(5793, 359)
+fruitType = "cherry"
+
+[node name="fruit54" parent="." unique_id=2006121721 instance=ExtResource("5_4vrwi")]
+position = Vector2(5722, 380)
+fruitType = "banana"
+
+[node name="fruit55" parent="." unique_id=2135811544 instance=ExtResource("5_4vrwi")]
+position = Vector2(5837, 380)
+fruitType = "banana"
+
+[node name="fruit56" parent="." unique_id=1151569585 instance=ExtResource("5_4vrwi")]
+position = Vector2(5693, 415)
+
+[node name="fruit57" parent="." unique_id=1605065354 instance=ExtResource("5_4vrwi")]
+position = Vector2(5865, 416)
+
+[node name="end" parent="." unique_id=1002072151 instance=ExtResource("12_8jmjw")]
+position = Vector2(6496, 352)
+next_level = "uid://di3dcwwmlvu00"
+
+[node name="spikes71" parent="." unique_id=301692472 instance=ExtResource("7_4v6h2")]
+position = Vector2(6127, 560)
+
+[node name="LogoUpgop" type="Sprite2D" parent="." unique_id=611771293]
+z_index = 2
+position = Vector2(6391, 572.00006)
+scale = Vector2(0.3183741, 0.5304183)
+texture = ExtResource("9_45hqr")

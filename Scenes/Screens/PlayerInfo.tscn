@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b4crpvjpw6bur"]
+
+[ext_resource type="Script" uid="uid://bopts325ct2bb" path="res://Scripts/player_info.gd" id="1_4n6bm"]
+
+[node name="PlayerInfo" type="CanvasLayer"]
+script = ExtResource("1_4n6bm")

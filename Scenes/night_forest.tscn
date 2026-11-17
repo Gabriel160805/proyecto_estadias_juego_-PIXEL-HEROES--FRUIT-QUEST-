@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://lkrk8t50cnn0"]
+
+[ext_resource type="Texture2D" uid="uid://dc4h2sflw0wnx" path="res://assets_2/Forest Night/PNG PALALLAX/layer_07_1920 x 1080.png" id="1_wu2aw"]
+[ext_resource type="Texture2D" uid="uid://bl0x5oypn5gka" path="res://assets_2/Forest Night/PNG PALALLAX/layer_06_1920 x 1080.png" id="2_6efpo"]
+[ext_resource type="Texture2D" uid="uid://cofvhg6adngun" path="res://assets_2/Forest Night/PNG PALALLAX/layer_05_1920 x 1080.png" id="3_fhuit"]
+[ext_resource type="Texture2D" uid="uid://bgc6j7ikvemvb" path="res://assets_2/Forest Night/PNG PALALLAX/layer_04_1920 x 1080.png" id="4_6jub8"]
+[ext_resource type="Texture2D" uid="uid://cinng7hstlqvi" path="res://assets_2/Forest Night/PNG PALALLAX/layer_03_1920 x 1080.png" id="5_eby6c"]
+[ext_resource type="Texture2D" uid="uid://isx41prlhf78" path="res://assets_2/Forest Night/PNG PALALLAX/layer_02_1920 x 1080.png" id="6_lhgba"]
+[ext_resource type="Texture2D" uid="uid://crd716rmmg7vq" path="res://assets_2/Forest Night/PNG PALALLAX/layer_01_1920 x 1080.png" id="7_kyi06"]
+
+[node name="night_forest" type="ParallaxBackground" unique_id=2057598182]
+
+[node name="fondo_luna" type="ParallaxLayer" parent="." unique_id=618691489]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sky" type="Sprite2D" parent="fondo_luna" unique_id=1024808776]
+position = Vector2(576, 324.00006)
+scale = Vector2(0.59999996, 0.6)
+texture = ExtResource("1_wu2aw")
+
+[node name="estrellas" type="ParallaxLayer" parent="." unique_id=1479756229]
+motion_scale = Vector2(1.1, 1.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="MiddleLayer" type="Sprite2D" parent="estrellas" unique_id=1222391903]
+position = Vector2(576, 324.00003)
+scale = Vector2(0.6000001, 0.59999996)
+texture = ExtResource("2_6efpo")
+
+[node name="arboles_gris" type="ParallaxLayer" parent="." unique_id=1294265971]
+motion_scale = Vector2(1.2, 1.2)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="MiddleLayer" type="Sprite2D" parent="arboles_gris" unique_id=1972706154]
+position = Vector2(576, 324)
+scale = Vector2(0.59999996, 0.59999996)
+texture = ExtResource("3_fhuit")
+
+[node name="arboles_negro" type="ParallaxLayer" parent="." unique_id=1580310759]
+motion_scale = Vector2(1.3, 1.3)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="MiddleLayer" type="Sprite2D" parent="arboles_negro" unique_id=1755230402]
+position = Vector2(576, 324.00003)
+scale = Vector2(0.59999996, 0.6000001)
+texture = ExtResource("4_6jub8")
+
+[node name="arboles_cafe_obscuro" type="ParallaxLayer" parent="." unique_id=561073047]
+motion_scale = Vector2(1.4, 1.4)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="MiddleLayer" type="Sprite2D" parent="arboles_cafe_obscuro" unique_id=104880384]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.59999996)
+texture = ExtResource("5_eby6c")
+
+[node name="cesped" type="ParallaxLayer" parent="." unique_id=718915392]
+motion_scale = Vector2(1.1, 1.1)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="MiddleLayer" type="Sprite2D" parent="cesped" unique_id=342701460]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_lhgba")
+
+[node name="suelo" type="ParallaxLayer" parent="." unique_id=1429324850]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="MiddleLayer" type="Sprite2D" parent="suelo" unique_id=1455954912]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_kyi06")
